@@ -19,4 +19,4 @@ If your repository fills the requirements, open a pull request that adds an obje
 
 Remember to include `,` at the end of the previous line so that the JSON format is valid. If there's an issue the test will fail and the test output will indicate what's wrong with your pull request.
 
-At the moment will include the latest 500 repositories in the showcase. Older repositories will be archived.
+At the moment will include the latest 200 repositories in the showcase. Older repositories will be archived.
