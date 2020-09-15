@@ -8,15 +8,15 @@ class GithubService {
     this.cache = cache;
   }
 
-  async callWithCache(cacheKey, fn) {
+  callWithCache(cacheKey, fn) {
     return callFunctionWithCache(this.cache, cacheKey, fn);
   }
 
   async getRepositories(repositories) {
     const data = await pMap(
       repositories,
-      ({ username, repository }) => {
-        return this.getRepository(username, repository).catch(() => undefined);
+      ({ owner, repository }) => {
+        return this.getRepository(owner, repository).catch(() => undefined);
       },
       { concurrency: 10, stopOnError: false },
     );
@@ -24,11 +24,11 @@ class GithubService {
     return data.filter(Boolean);
   }
 
-  async getRepository(username, repository) {
-    const cacheKey = `repository.${username}.${repository}`;
+  async getRepository(owner, repository) {
+    const cacheKey = `repository.${owner}.${repository}`;
 
     const { data } = await this.callWithCache(cacheKey, () => {
-      return this.httpClient.get(`/repos/${username}/${repository}`);
+      return this.httpClient.get(`/repos/${owner}/${repository}`);
     });
 
     return data;

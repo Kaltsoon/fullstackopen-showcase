@@ -1,9 +1,9 @@
 const parseRepositoryUrl = (url) => {
   const pathname = new URL(url).pathname;
-  const [, username, repository] = pathname.split('/');
+  const [, owner, repository] = pathname.split('/');
 
   return {
-    username,
+    owner,
     repository,
   };
 };

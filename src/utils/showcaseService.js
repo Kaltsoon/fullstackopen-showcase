@@ -22,7 +22,7 @@ class ShowcaseService {
     this.dataUrl = dataUrl;
   }
 
-  async callWithCache(cacheKey, fn) {
+  callWithCache(cacheKey, fn) {
     return callFunctionWithCache(this.cache, cacheKey, fn);
   }
 
