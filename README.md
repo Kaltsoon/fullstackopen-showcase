@@ -1,6 +1,6 @@
 # Full Stack open showcase
 
-Share the projects you have made based on what you have learned in the [Full Stack open][https://fullstackopen.com/] course. The idea of the Full Stack open showcase is to show students all the cool they can do with the concepts they will learn during the course.
+Share the projects you have made based on what you have learned in the [Full Stack open](https://fullstackopen.com/) course. The idea of the Full Stack open showcase is to show students all the cool they can do with the concepts they will learn during the course.
 
 ## How do I submit my repository?
 
@@ -13,7 +13,6 @@ If your repository fills the requirements, open a pull request that adds an obje
 
 ```json
 [
-  // ...
   { "url": "https://github.com/<MY_USERNAME>/<MY_REPOSITORY>" }
 ]
 ```
