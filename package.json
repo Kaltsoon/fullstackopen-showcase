@@ -1,0 +1,26 @@
+{
+  "name": "fullstackopen-showcase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r esm ./src/index.js",
+    "test": "node -r esm ./src/test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "dotenv": "^8.2.0",
+    "es6-error": "^4.1.1",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "lodash": "^4.17.20",
+    "lru-cache": "^6.0.0",
+    "morgan": "^1.10.0",
+    "p-map": "^4.0.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {}
+}
