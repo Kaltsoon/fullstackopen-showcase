@@ -7,8 +7,8 @@ import showcaseService from '../utils/showcaseService';
 const router = express.Router();
 
 const normalizeRepositories = (repositories) => {
-  return repositories.map(
-    ({ id, name, full_name, description, html_url, owner }) => ({
+  return repositories
+    .map(({ id, name, full_name, description, html_url, owner }) => ({
       id,
       name,
       fullName: full_name,
@@ -16,8 +16,8 @@ const normalizeRepositories = (repositories) => {
       url: html_url,
       ownerName: get(owner, 'login'),
       ownerAvatarUrl: get(owner, 'avatar_url'),
-    }),
-  );
+    }))
+    .reverse();
 };
 
 router.get('/', async (_, res) => {
