@@ -11,8 +11,11 @@ There are a few requirements for the project repository:
 
 If your repository fills the requirements, open a pull request that adds an object in the following format at _the end_ of the array in the [repositories.json](https://github.com/Kaltsoon/fullstackopen-showcase/edit/master/data/repositories.json) file:
 
+<!-- prettier-ignore -->
 ```json
-[{ "url": "https://github.com/<MY_USERNAME>/<MY_REPOSITORY>" }]
+[
+  { "url": "https://github.com/<MY_USERNAME>/<MY_REPOSITORY>" }
+]
 ```
 
 Remember to include `,` at the end of the previous line so that the JSON format is valid. If there's an issue the test will fail and the test output will indicate what's wrong with your pull request.
