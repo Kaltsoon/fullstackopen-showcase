@@ -3,7 +3,7 @@ import path from 'path';
 
 dotenv.config({ path: path.resolve(__dirname, '..', '.env') });
 
-export const REPOSITORY_LIMIT = 2;
+export const REPOSITORY_LIMIT = 500;
 
 export const {
   PORT,
