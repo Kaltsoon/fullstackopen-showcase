@@ -12,7 +12,7 @@ import logger from './utils/logger';
 
 const app = express();
 
-app.use(morgan('tiny'))
+app.use(morgan('tiny'));
 app.use(routes);
 app.use(notFoundHandler);
 app.use(errorHandler);
@@ -20,4 +20,3 @@ app.use(errorHandler);
 app.listen(PORT, () => {
   logger.info(`Server listening to port ${PORT}`);
 });
-

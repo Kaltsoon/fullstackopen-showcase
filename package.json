@@ -5,7 +5,28 @@
   "main": "index.js",
   "scripts": {
     "start": "node -r esm ./src/index.js",
-    "test": "node -r esm ./src/test.js"
+    "test": "node -r esm ./src/test.js",
+    "format": "prettier --write",
+    "format:all": "prettier --write \"./{src,data}/**/*.{js,json}\"",
+    "lint": "eslint",
+    "lint:all": "eslint \"./src/**/*.js\"",
+    "data:compress": "node -r esm ./src/compress.js",
+    "data:format": "prettier --write \"./data/**/*.json\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/src/**/*.js": [
+      "npm run lint",
+      "git add"
+    ],
+    "*.{js,json,css,md}": [
+      "npm run format",
+      "git add"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +43,11 @@
     "p-map": "^4.0.0",
     "winston": "^3.3.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.9.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.2"
+  }
 }

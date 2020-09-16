@@ -19,7 +19,7 @@ const githubHttpClient = new GithubHttpClient({
   }),
 });
 
-const CACHE_MAX_AGE = 1000 * 60 * 60 * 6;
+const CACHE_MAX_AGE = 1000 * 60 * 60;
 
 export default new GithubService({
   httpClient: githubHttpClient,

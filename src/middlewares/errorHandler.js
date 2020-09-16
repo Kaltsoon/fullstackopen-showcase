@@ -1,7 +1,7 @@
 import { ApplicationError } from '../errors';
 import logger from '../utils/logger';
 
-const errorHandler = (err, req, res) => {
+const errorHandler = (err, _, res) => {
   logger.error(err);
 
   const normalizedError =

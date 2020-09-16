@@ -20,7 +20,7 @@ const normalizeRepositories = (repositories) => {
   );
 };
 
-router.get('/', async (req, res) => {
+router.get('/', async (_, res) => {
   const showcaseRepositories = await showcaseService.getRepositories();
 
   const repositories = await githubService.getRepositories(
